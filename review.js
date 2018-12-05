@@ -47,3 +47,27 @@ console.log(number.constructor); //Number
 
 var array = [1, 2, 3, 4, 5];
 console.log(array.constructor); //Array
+
+// Adding Properties And Methods
+let ironMan = {
+    name: "anthony",
+    lastName: "Stark",
+    age: 32,
+    powers: ["Flight", "Strength"]
+}
+//Adding an Object
+ironMan.girlFriend = {
+    name: "Pepper Potts",
+    age: 30,
+    powers: []
+};
+//Adding a Method
+ironMan.attack: function (x) {
+    console.log(`Your opponent loses ${x} hp!`);
+};
+ironMan.attack(8);
+//Adding to a string
+ironMan.powers.push("Intelligence");
+
+console.log(ironMan);
+
