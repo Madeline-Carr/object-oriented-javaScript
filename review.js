@@ -48,9 +48,9 @@ console.log(number.constructor); //Number
 var array = [1, 2, 3, 4, 5];
 console.log(array.constructor); //Array
 
-// Adding Properties And Methods
+// Adding Properties and Methods
 let ironMan = {
-    name: "anthony",
+    name: "Anthony",
     lastName: "Stark",
     age: 32,
     powers: ["Flight", "Strength"]
@@ -62,7 +62,7 @@ ironMan.girlFriend = {
     powers: []
 };
 //Adding a Method
-ironMan.attack: function (x) {
+ironMan.attack = function (x) {
     console.log(`Your opponent loses ${x} hp!`);
 };
 ironMan.attack(8);
@@ -71,3 +71,16 @@ ironMan.powers.push("Intelligence");
 
 console.log(ironMan);
 
+//Enumerating Properties
+for (let key in ironMan) {
+    console.log(key, ironMan[key]);
+}
+
+// Returning keys as an array. 
+let tonyStark = Object.keys(ironMan);
+console.log(tonyStark);
+
+//Checking to see if an object has a property 
+if ("powers" in ironMan) {
+    console.log("Ironman has these powers: " + ironMan.powers);
+}
