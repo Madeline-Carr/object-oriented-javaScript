@@ -71,6 +71,11 @@ ironMan.powers.push("Intelligence");
 
 console.log(ironMan);
 
+//Deleting Object Properties
+delete ironMan.age;
+console.log(ironMan);
+
+
 //Enumerating Properties
 for (let key in ironMan) {
     console.log(key, ironMan[key]);
@@ -84,3 +89,14 @@ console.log(tonyStark);
 if ("powers" in ironMan) {
     console.log("Ironman has these powers: " + ironMan.powers);
 }
+
+//Private Properties and Methods
+function Bartowski(name) {
+    //This property is private because it is not created in Chuck.
+    var lastName = "Bartowski";
+    this.name = name;
+    this.fullName = this.name + "" + lastName;
+}
+
+const Chuck = new Bartowski("Chuck");
+console.log(Chuck);
